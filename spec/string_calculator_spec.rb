@@ -12,4 +12,12 @@ RSpec.describe StringCalculator do
   it "returns the number for single number input" do
     expect(calc.add("1")).to eq(1)
   end
+
+  it "adds two comma-separated numbers" do
+    expect(calc.add("1,5")).to eq(6)
+  end
+
+  it "handles newlines between numbers" do
+    expect(calc.add("1\n2,3")).to eq(6)
+  end
 end
