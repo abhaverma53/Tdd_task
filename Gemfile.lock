@@ -179,7 +179,7 @@ PLATFORMS
 DEPENDENCIES
   rails (= 5.2.3)
   rspec (~> 3.12)
-  simplecov (~> 0.21)
+  simplecov
 
 RUBY VERSION
    ruby 3.2.0p0
