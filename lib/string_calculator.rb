@@ -14,6 +14,12 @@ class StringCalculator
 
     tokens = str.split(delimiter_regex).reject(&:empty?)
     ints = tokens.map(&:to_i)
+
+    negatives = ints.select { |n| n < 0 }
+    unless negatives.empty?
+      raise ArgumentError.new("negative numbers not allowed #{negatives.join(',')}")
+    end
+
     ints.reduce(0, :+)
   end
 end
